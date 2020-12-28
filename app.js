@@ -1,19 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Alberto } from './components/Alberto';
+import React from "react";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store } from './redux/store';
+import { Alberto } from "./components/Alberto";
+import { store } from "./redux/store";
 
-const App = () => {
-    return (
-        <div>
-            <Alberto/>
-            <Alberto/>
-            <Alberto/>
-        </div>
-    )
-}
+const App = () => (
+  <div>
+    <Alberto />
+    <Alberto />
+    <Alberto />
+    <Alberto />
+  </div>
+);
 
-const AppWithStore = () => <Provider store={store}><App/></Provider>
+const AppWithStore = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
 
-ReactDOM.render(<AppWithStore/>, document.getElementById('root'));
+ReactDOM.render(<AppWithStore />, document.getElementById("root"));
